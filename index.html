@@ -1131,36 +1131,20 @@
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-5 gap-10">
-      <!-- Form -->
-      <div class="lg:col-span-3 reveal-left">
-        <div class="glass rounded-2xl p-8">
-          <div class="grid md:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label for="name">Full Name</label>
-              <input type="text" id="name" class="form-input" placeholder="Harshit Goyal" />
-            </div>
-            <div>
-              <label for="email">Email Address</label>
-              <input type="email" id="email" class="form-input" placeholder="hello@example.com" />
-            </div>
-          </div>
-          <div class="mb-5">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" class="form-input" placeholder="Project inquiry..." />
-          </div>
-          <div class="mb-6">
-            <label for="message">Message</label>
-            <textarea id="message" class="form-input" rows="5" placeholder="Tell me about your project..."></textarea>
-          </div>
-          <button onclick="handleFormSubmit()" class="btn-primary w-full justify-center">
-            <i class="fa-solid fa-paper-plane text-sm"></i> Send Message
-          </button>
-        </div>
-      </div>
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap justify-center gap-5 mb-14 reveal">
+      <a href="https://wa.me/919669387011?text=Hi%20Harshit%2C%20I%20have%20a%20project%20for%20you!" target="_blank"
+        class="btn-primary text-base px-8 py-4" style="background: linear-gradient(135deg,#22C55E,#16A34A); box-shadow: 0 8px 30px rgba(34,197,94,0.25)">
+        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Me
+      </a>
+      <a href="tel:+919669387011" class="btn-primary text-base px-8 py-4">
+        <i class="fa-solid fa-phone text-sm"></i> Call Now
+      </a>
+    </div>
 
+    <div class="grid lg:grid-cols-1 max-w-2xl mx-auto gap-10">
       <!-- Info -->
-      <div class="lg:col-span-2 reveal-right flex flex-col gap-4">
+      <div class="reveal flex flex-col gap-4">
         <a href="mailto:myownh1@gmail.com" class="glass glass-hover rounded-xl p-5 flex items-center gap-4 text-left no-underline">
           <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 text-xl">📧</div>
           <div>
@@ -1198,7 +1182,7 @@
         </a>
 
         <!-- Location -->
-        <div class="glass rounded-xl p-5 flex items-center gap-4 mt-auto">
+        <div class="glass rounded-xl p-5 flex items-center gap-4">
           <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 text-xl">📍</div>
           <div>
             <p class="text-xs text-slate-500 mb-1">Location</p>
