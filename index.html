@@ -34,7 +34,6 @@
     html { scroll-behavior: smooth; }
     body { background: #0B0F19; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-    /* Loading screen */
     #loader {
       position: fixed; inset: 0; background: #0B0F19; z-index: 9999;
       display: flex; align-items: center; justify-content: center;
@@ -48,18 +47,15 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: #0B0F19; }
     ::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 4px; }
 
-    /* Gradient blobs */
     .blob {
       position: absolute; border-radius: 50%; filter: blur(120px);
       pointer-events: none; z-index: 0;
     }
 
-    /* Glass card */
     .glass {
       background: rgba(22, 29, 47, 0.7);
       backdrop-filter: blur(16px);
@@ -74,7 +70,6 @@
       transform: translateY(-4px);
     }
 
-    /* Gradient text */
     .grad-text {
       background: linear-gradient(135deg, #A855F7, #3B82F6);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -86,20 +81,14 @@
       background-clip: text;
     }
 
-    /* Gradient border */
-    .grad-border {
-      position: relative;
-    }
+    .grad-border { position: relative; }
     .grad-border::before {
-      content: '';
-      position: absolute; inset: -1px; border-radius: inherit;
+      content: ''; position: absolute; inset: -1px; border-radius: inherit;
       background: linear-gradient(135deg, #7C3AED, #3B82F6);
-      z-index: -1; opacity: 0;
-      transition: opacity 0.3s;
+      z-index: -1; opacity: 0; transition: opacity 0.3s;
     }
     .grad-border:hover::before { opacity: 1; }
 
-    /* Buttons */
     .btn-primary {
       background: linear-gradient(135deg, #7C3AED, #3B82F6);
       color: #fff; padding: 12px 28px; border-radius: 10px;
@@ -125,7 +114,6 @@
       transform: translateY(-2px);
     }
 
-    /* Navbar */
     nav { transition: background 0.3s, box-shadow 0.3s; }
     nav.scrolled {
       background: rgba(11,15,25,0.95) !important;
@@ -133,14 +121,12 @@
       backdrop-filter: blur(20px);
     }
 
-    /* Skill bars */
     .skill-bar-fill {
       height: 6px; border-radius: 99px;
       background: linear-gradient(90deg, #7C3AED, #3B82F6);
       width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
     }
 
-    /* Profile glow ring */
     .profile-ring {
       background: linear-gradient(135deg, #7C3AED, #3B82F6, #A855F7);
       border-radius: 50%; padding: 3px;
@@ -151,16 +137,12 @@
       to { filter: hue-rotate(360deg); }
     }
 
-    /* Floating animation */
-    .float-anim {
-      animation: float 4s ease-in-out infinite;
-    }
+    .float-anim { animation: float 4s ease-in-out infinite; }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-12px); }
     }
 
-    /* Reveal on scroll */
     .reveal {
       opacity: 0; transform: translateY(36px);
       transition: opacity 0.7s ease, transform 0.7s ease;
@@ -177,22 +159,18 @@
     }
     .reveal-right.visible { opacity: 1; transform: translateX(0); }
 
-    /* Section label */
     .section-label {
       font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
       text-transform: uppercase; color: #A855F7;
     }
 
-    /* Testimonial slider */
     .testimonial-track {
       display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
     }
     .testimonial-card { flex-shrink: 0; width: 100%; }
 
-    /* Particle canvas */
     #particles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 
-    /* Avatar placeholder */
     .avatar-placeholder {
       width: 100%; height: 100%;
       display: flex; align-items: center; justify-content: center;
@@ -202,15 +180,12 @@
       text-shadow: 0 0 60px rgba(168,85,247,0.6);
     }
 
-    /* Nav mobile menu */
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
     #mobile-menu.open { max-height: 400px; }
 
-    /* Active nav link */
     .nav-link {
       position: relative; color: #94A3B8; font-size: 14px; font-weight: 500;
-      transition: color 0.2s;
-      padding: 4px 0;
+      transition: color 0.2s; padding: 4px 0;
     }
     .nav-link::after {
       content: ''; position: absolute; bottom: -2px; left: 0;
@@ -221,7 +196,6 @@
     .nav-link:hover, .nav-link.active { color: #fff; }
     .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-    /* Availability badge */
     .avail-dot {
       width: 8px; height: 8px; background: #22C55E;
       border-radius: 50%;
@@ -233,7 +207,6 @@
       50% { box-shadow: 0 0 0 6px rgba(34,197,94,0.1); }
     }
 
-    /* Contact form */
     .form-input {
       width: 100%; background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
@@ -248,7 +221,6 @@
     }
     label { font-size: 13px; font-weight: 500; color: #94A3B8; margin-bottom: 6px; display: block; }
 
-    /* Project card */
     .project-card { overflow: hidden; }
     .project-img-wrap { overflow: hidden; }
     .project-img-wrap img {
@@ -257,7 +229,6 @@
     }
     .project-card:hover .project-img-wrap img { transform: scale(1.06); }
 
-    /* Service card icon */
     .service-icon {
       width: 48px; height: 48px; border-radius: 12px;
       background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(59,130,246,0.2));
@@ -265,12 +236,97 @@
       font-size: 20px; margin-bottom: 16px;
     }
 
-    /* Timeline */
     .timeline-dot {
       width: 12px; height: 12px; border-radius: 50%;
       background: linear-gradient(135deg, #7C3AED, #3B82F6);
       flex-shrink: 0; margin-top: 6px;
     }
+
+    /* ====== PORTFOLIO FILTER TABS ====== */
+    .filter-tab {
+      padding: 8px 20px; border-radius: 99px; font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.25s; border: 1px solid rgba(255,255,255,0.08);
+      color: #94A3B8; background: transparent; white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .filter-tab:hover { border-color: rgba(124,58,237,0.4); color: #fff; }
+    .filter-tab.active {
+      background: linear-gradient(135deg, #7C3AED, #3B82F6);
+      border-color: transparent; color: #fff;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.35);
+    }
+
+    /* Portfolio item card */
+    .portfolio-item {
+      transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    .portfolio-item.hidden-item {
+      opacity: 0; transform: scale(0.92); pointer-events: none;
+      position: absolute; visibility: hidden;
+    }
+
+    /* Logo card — square ratio */
+    .logo-card-img { height: 180px; background: #0e1420; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .logo-card-img img { width: 100%; height: 100%; object-fit: contain; }
+
+    /* Brochure card — tall ratio */
+    .brochure-img { height: 240px; }
+    .brochure-img img { height: 240px !important; }
+
+    /* Business card — short landscape */
+    .biz-img { height: 160px; }
+    .biz-img img { height: 160px !important; }
+
+    /* Mobile app — tall portrait */
+    .app-img { height: 280px; }
+    .app-img img { height: 280px !important; object-fit: cover; }
+
+    /* Floating btns */
+    .floating-btn {
+      position: fixed; bottom: 28px; z-index: 999;
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; text-decoration: none; cursor: pointer;
+      border: none; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s;
+    }
+    .floating-btn i { font-size: 22px; }
+    .whatsapp-btn {
+      left: 24px;
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      box-shadow: 0 6px 24px rgba(34,197,94,0.45);
+      animation: floatUp 0.6s 1.2s both;
+    }
+    .whatsapp-btn:hover { transform: translateY(-4px) scale(1.12); box-shadow: 0 12px 32px rgba(34,197,94,0.55); }
+    .call-btn {
+      right: 24px;
+      background: linear-gradient(135deg, #7C3AED, #3B82F6);
+      box-shadow: 0 6px 24px rgba(124,58,237,0.45);
+      animation: floatUp 0.6s 1.4s both;
+    }
+    .call-btn:hover { transform: translateY(-4px) scale(1.12); box-shadow: 0 12px 32px rgba(124,58,237,0.55); }
+    .whatsapp-btn::before, .call-btn::before {
+      content: ''; position: absolute; inset: -5px; border-radius: 50%;
+      opacity: 0; animation: pulse-ring 2.5s ease-out infinite;
+    }
+    .whatsapp-btn::before { border: 2px solid rgba(34,197,94,0.6); }
+    .call-btn::before { border: 2px solid rgba(124,58,237,0.6); }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      70% { transform: scale(1.4); opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Dummy image placeholder */
+    .dummy-img {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px;
+    }
+    .dummy-img span { font-size: 11px; color: #4B5563; font-weight: 500; letter-spacing: 0.05em; }
   </style>
 </head>
 <body class="antialiased">
@@ -286,39 +342,31 @@
 <!-- NAVBAR -->
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Logo -->
     <a href="#" class="font-display text-xl font-bold grad-text-warm">HG.</a>
-
-    <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
       <a href="#about" class="nav-link">About</a>
       <a href="#skills" class="nav-link">Skills</a>
       <a href="#services" class="nav-link">Services</a>
-      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
       <a href="#testimonials" class="nav-link">Reviews</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
-
     <div class="hidden md:flex items-center gap-3">
       <span class="flex items-center gap-2 text-xs text-green-400 font-medium">
         <span class="avail-dot"></span> Available
       </span>
       <a href="#contact" class="btn-primary text-sm py-2.5 px-5">Hire Me</a>
     </div>
-
-    <!-- Hamburger -->
     <button id="hamburger" class="md:hidden text-white p-2 rounded-lg hover:bg-white/5 transition" aria-label="Toggle menu">
       <i class="fa-solid fa-bars text-lg"></i>
     </button>
   </div>
-
-  <!-- Mobile menu -->
   <div id="mobile-menu" class="md:hidden border-t border-white/5">
     <div class="px-6 py-4 flex flex-col gap-4 bg-bg/95 backdrop-blur-xl">
       <a href="#about" class="nav-link mobile-nav-link">About</a>
       <a href="#skills" class="nav-link mobile-nav-link">Skills</a>
       <a href="#services" class="nav-link mobile-nav-link">Services</a>
-      <a href="#projects" class="nav-link mobile-nav-link">Projects</a>
+      <a href="#portfolio" class="nav-link mobile-nav-link">Portfolio</a>
       <a href="#testimonials" class="nav-link mobile-nav-link">Reviews</a>
       <a href="#contact" class="nav-link mobile-nav-link">Contact</a>
       <a href="#contact" class="btn-primary text-sm py-2.5 px-5 self-start">Hire Me</a>
@@ -326,49 +374,38 @@
   </div>
 </nav>
 
-<!-- ====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 <section id="hero" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
   <canvas id="particles"></canvas>
-
-  <!-- Blobs -->
   <div class="blob w-[600px] h-[600px] bg-purple-700/20 -top-48 -left-48"></div>
   <div class="blob w-[500px] h-[500px] bg-blue-600/15 -bottom-32 -right-32"></div>
   <div class="blob w-[300px] h-[300px] bg-accent/10 top-1/2 left-1/2 -translate-x-1/2"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <!-- Left -->
       <div>
-        <!-- Badge -->
         <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8">
           <span class="avail-dot"></span>
           <span class="text-xs text-slate-300 font-medium">Available for Freelance Projects</span>
         </div>
-
         <h1 class="font-display font-bold leading-[1.08] mb-6" style="font-size: clamp(44px,6vw,80px)">
           Hi, I'm<br>
           <span class="grad-text">Harshit Goyal</span>
         </h1>
-
         <p class="text-slate-400 text-lg font-medium mb-3">
           UI/UX Designer &amp; Front-End Developer
         </p>
         <p class="text-slate-500 text-base leading-relaxed mb-10 max-w-lg">
           Crafting pixel-perfect, performant web experiences using React, JavaScript, and modern UI/UX principles — turning complex problems into elegant, intuitive interfaces.
         </p>
-
         <div class="flex flex-wrap gap-4 mb-12">
           <a href="#contact" class="btn-primary">
             <i class="fa-solid fa-paper-plane text-sm"></i> Hire Me
           </a>
-          <a href="#projects" class="btn-outline">
-            View Projects <i class="fa-solid fa-arrow-right text-sm"></i>
+          <a href="#portfolio" class="btn-outline">
+            View Portfolio <i class="fa-solid fa-arrow-right text-sm"></i>
           </a>
         </div>
-
-        <!-- Stats -->
         <div class="flex gap-8 flex-wrap">
           <div>
             <p class="font-display text-3xl font-bold grad-text">10+</p>
@@ -387,31 +424,18 @@
         </div>
       </div>
 
-      <!-- Right: Avatar -->
       <div class="flex justify-center lg:justify-end float-anim">
         <div class="relative">
-          <!-- Outer glow -->
           <div class="absolute inset-0 rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(124,58,237,0.4) 0%, transparent 70%); transform: scale(1.2);"></div>
-
-          <!-- Ring -->
           <div class="profile-ring" style="width: clamp(260px,30vw,360px); height: clamp(260px,30vw,360px);">
             <div class="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-purple-900/80 to-blue-900/80">
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&fit=crop"
-                alt="Harshit Goyal workspace"
-                class="w-full h-full object-cover opacity-80"
-              />
-              <div class="avatar-placeholder absolute inset-0 flex items-center justify-center" style="display:none">HG</div>
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&fit=crop" alt="Harshit Goyal workspace" class="w-full h-full object-cover opacity-80" />
             </div>
           </div>
-
-          <!-- Badge card -->
           <div class="absolute -bottom-4 -left-4 glass rounded-2xl px-5 py-3 shadow-xl">
             <p class="text-xs text-slate-400">Frontend Excellence</p>
             <p class="font-display font-bold text-white text-sm mt-0.5">10+ Years 💻</p>
           </div>
-
-          <!-- Small floating chip -->
           <div class="absolute -top-2 -right-4 glass rounded-xl px-4 py-2 shadow-xl">
             <div class="flex items-center gap-2">
               <span class="text-purple-400 text-sm"><i class="fa-brands fa-react fa-spin"></i></span>
@@ -423,22 +447,17 @@
     </div>
   </div>
 
-  <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 z-10">
     <span class="text-xs tracking-widest">SCROLL</span>
     <div class="w-px h-10 bg-gradient-to-b from-purple-500 to-transparent animate-pulse"></div>
   </div>
 </section>
 
-<!-- ====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 <section id="about" class="relative py-28 overflow-hidden">
   <div class="blob w-[400px] h-[400px] bg-blue-600/10 top-0 right-0"></div>
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-      <!-- Images collage -->
       <div class="reveal-left relative h-[480px] hidden lg:block">
         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80&fit=crop"
           class="absolute top-0 left-0 w-3/4 h-72 object-cover rounded-2xl shadow-2xl"
@@ -446,31 +465,22 @@
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80&fit=crop"
           class="absolute bottom-0 right-0 w-1/2 h-56 object-cover rounded-2xl shadow-2xl"
           style="border: 1px solid rgba(59,130,246,0.2)" alt="code close" />
-        <!-- Years badge -->
         <div class="absolute top-1/2 right-6 -translate-y-1/2 glass rounded-2xl p-5 text-center shadow-2xl">
           <p class="font-display text-4xl font-black grad-text">10+</p>
           <p class="text-xs text-slate-400 mt-1">Years<br>of Code</p>
         </div>
       </div>
-
-      <!-- Text -->
       <div class="reveal-right">
         <p class="section-label mb-3">About Me</p>
         <h2 class="font-display font-bold text-white mb-6" style="font-size: clamp(30px,4vw,48px); line-height:1.15">
           Crafting digital experiences<br>that <em class="grad-text not-italic">actually matter</em>
         </h2>
         <p class="text-slate-400 leading-relaxed mb-4">
-          Hi, I'm <strong class="text-white">Harshit Goyal</strong> — a passionate frontend developer
-          with a problem-solving mindset and an eye for beautiful, functional design. I believe great
-          software starts with understanding people, not just code.
+          Hi, I'm <strong class="text-white">Harshit Goyal</strong> — a passionate frontend developer with a problem-solving mindset and an eye for beautiful, functional design.
         </p>
         <p class="text-slate-400 leading-relaxed mb-8">
-          I specialise in building <strong class="text-purple-400">scalable React applications</strong>
-          that are fast, accessible, and a delight to use. From component architecture to animation
-          choreography, I care deeply about every pixel and interaction.
+          I specialise in building <strong class="text-purple-400">scalable React applications</strong> that are fast, accessible, and a delight to use. From component architecture to animation choreography, I care deeply about every pixel and interaction.
         </p>
-
-        <!-- Traits -->
         <div class="grid grid-cols-2 gap-4">
           <div class="glass glass-hover rounded-xl p-4">
             <div class="text-xl mb-2">⚡</div>
@@ -498,9 +508,7 @@
   </div>
 </section>
 
-<!-- ====================================================
-     SKILLS
-===================================================== -->
+<!-- SKILLS -->
 <section id="skills" class="py-28 relative overflow-hidden">
   <div class="blob w-[500px] h-[500px] bg-purple-700/10 top-0 left-0"></div>
   <div class="max-w-7xl mx-auto px-6">
@@ -510,119 +518,68 @@
         Tools I <span class="grad-text">Work With</span>
       </h2>
     </div>
-
     <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <!-- Skill items -->
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">🌐</span>
-            <span class="font-semibold text-white">HTML5</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">🌐</span><span class="font-semibold text-white">HTML5</span></div>
           <span class="text-sm text-purple-400 font-bold">95%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="95"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="95"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">🎨</span>
-            <span class="font-semibold text-white">CSS3</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">🎨</span><span class="font-semibold text-white">CSS3</span></div>
           <span class="text-sm text-purple-400 font-bold">90%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="90"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="90"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">⚡</span>
-            <span class="font-semibold text-white">JavaScript</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">⚡</span><span class="font-semibold text-white">JavaScript</span></div>
           <span class="text-sm text-purple-400 font-bold">75%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="75"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="75"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">⚛️</span>
-            <span class="font-semibold text-white">React</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">⚛️</span><span class="font-semibold text-white">React</span></div>
           <span class="text-sm text-purple-400 font-bold">85%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="85"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="85"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">💨</span>
-            <span class="font-semibold text-white">Tailwind CSS</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">💨</span><span class="font-semibold text-white">Tailwind CSS</span></div>
           <span class="text-sm text-purple-400 font-bold">82%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="82"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="82"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">🔧</span>
-            <span class="font-semibold text-white">Figma</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">🔧</span><span class="font-semibold text-white">Figma</span></div>
           <span class="text-sm text-purple-400 font-bold">70%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="70"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="70"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">📦</span>
-            <span class="font-semibold text-white">Photoshop</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">📦</span><span class="font-semibold text-white">Photoshop</span></div>
           <span class="text-sm text-purple-400 font-bold">90%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="90"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="90"></div></div>
       </div>
-
       <div class="glass glass-hover rounded-2xl p-6 reveal skill-card">
         <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">🤖</span>
-            <span class="font-semibold text-white">AI Tools</span>
-          </div>
+          <div class="flex items-center gap-3"><span class="text-2xl">🤖</span><span class="font-semibold text-white">AI Tools</span></div>
           <span class="text-sm text-purple-400 font-bold">88%</span>
         </div>
-        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
-          <div class="skill-bar-fill" data-width="88"></div>
-        </div>
+        <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar-fill" data-width="88"></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====================================================
-     SERVICES
-===================================================== -->
+<!-- SERVICES -->
 <section id="services" class="py-28 relative overflow-hidden">
   <div class="blob w-[400px] h-[400px] bg-blue-600/10 -bottom-20 right-0"></div>
   <div class="max-w-7xl mx-auto px-6">
@@ -635,80 +592,92 @@
         From concept to code — I deliver end-to-end digital experiences that look stunning and perform flawlessly.
       </p>
     </div>
-
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Service cards -->
       <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
         <div class="service-icon">🖌️</div>
         <h3 class="font-display font-semibold text-white text-lg mb-2">UI/UX Design</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          User-centred designs with intuitive flows, clean wireframes, and pixel-perfect prototypes in Figma.
-        </p>
+        <p class="text-slate-500 text-sm leading-relaxed">User-centred designs with intuitive flows, clean wireframes, and pixel-perfect prototypes in Figma.</p>
       </div>
       <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
         <div class="service-icon">🌐</div>
         <h3 class="font-display font-semibold text-white text-lg mb-2">Website Design</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Modern, fast, and fully responsive websites that make a strong first impression and convert visitors.
-        </p>
+        <p class="text-slate-500 text-sm leading-relaxed">Modern, fast, and fully responsive websites that make a strong first impression and convert visitors.</p>
       </div>
       <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
         <div class="service-icon">🚀</div>
         <h3 class="font-display font-semibold text-white text-lg mb-2">Landing Page Design</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          High-converting landing pages with compelling copy, hero sections, and strategic CTAs that drive results.
-        </p>
+        <p class="text-slate-500 text-sm leading-relaxed">High-converting landing pages with compelling copy, hero sections, and strategic CTAs that drive results.</p>
+      </div>
+      <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
+        <div class="service-icon">🏷️</div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Logo & Brand Identity</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Memorable logos and cohesive brand kits — color palette, typography, and usage guidelines.</p>
+      </div>
+      <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
+        <div class="service-icon">📄</div>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Brochure & Print Design</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Eye-catching brochures, flyers, and print-ready collateral that elevate your offline presence.</p>
       </div>
       <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
         <div class="service-icon">📱</div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Responsive Development</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Mobile-first front-end development with React and Tailwind — flawless on every screen size.
-        </p>
-      </div>
-      <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
-        <div class="service-icon">⚡</div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Figma → HTML/React</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Precise pixel-perfect conversion of Figma designs to clean, maintainable HTML or React components.
-        </p>
-      </div>
-      <div class="glass glass-hover grad-border rounded-2xl p-6 reveal">
-        <div class="service-icon">📊</div>
-        <h3 class="font-display font-semibold text-white text-lg mb-2">Dashboard Design</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Modern SaaS dashboard UIs with data visualisations, dark themes, and seamless user workflows.
-        </p>
+        <h3 class="font-display font-semibold text-white text-lg mb-2">Mobile App UI</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Polished iOS &amp; Android app interfaces with smooth flows, accessible components, and dark/light modes.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ====================================================
-     PROJECTS
+     PORTFOLIO (with filter tabs)
 ===================================================== -->
-<section id="projects" class="py-28 relative overflow-hidden">
+<section id="portfolio" class="py-28 relative overflow-hidden">
   <div class="blob w-[500px] h-[500px] bg-purple-700/10 top-0 left-0"></div>
   <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 reveal">
+
+    <div class="text-center mb-10 reveal">
       <p class="section-label mb-3">Portfolio</p>
       <h2 class="font-display font-bold text-white" style="font-size: clamp(30px,4vw,48px)">
-        Things I've <span class="grad-text">Built</span>
+        Things I've <span class="grad-text">Created</span>
       </h2>
+      <p class="text-slate-500 mt-4 max-w-lg mx-auto text-sm leading-relaxed">
+        A curated selection of my work across websites, branding, print, and mobile.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Filter tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+      <button class="filter-tab active" data-filter="all">
+        <i class="fa-solid fa-border-all text-xs"></i> All
+      </button>
+      <button class="filter-tab" data-filter="website">
+        <i class="fa-solid fa-globe text-xs"></i> Websites
+      </button>
+      <button class="filter-tab" data-filter="logo">
+        <i class="fa-solid fa-pen-nib text-xs"></i> Logo & Brand
+      </button>
+      <button class="filter-tab" data-filter="brochure">
+        <i class="fa-solid fa-file-lines text-xs"></i> Brochures
+      </button>
+      <button class="filter-tab" data-filter="bizcard">
+        <i class="fa-solid fa-id-card text-xs"></i> Business Cards
+      </button>
+      <button class="filter-tab" data-filter="app">
+        <i class="fa-solid fa-mobile-screen text-xs"></i> Mobile Apps
+      </button>
+    </div>
 
-      <div class="glass glass-hover project-card rounded-2xl overflow-hidden reveal">
+    <!-- Portfolio grid -->
+    <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+
+      <!-- ===== WEBSITES ===== -->
+      <div class="portfolio-item glass glass-hover project-card rounded-2xl overflow-hidden reveal" data-category="website">
         <div class="project-img-wrap">
           <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&fit=crop" alt="Jewellery E-Shop" />
         </div>
         <div class="p-5">
           <span class="text-xs font-medium text-purple-400 bg-purple-400/10 rounded-full px-3 py-1">E-Commerce</span>
           <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">Luxury Jewellery E-Shop</h3>
-          <p class="text-slate-500 text-xs leading-relaxed mb-4">
-            Full-featured e-commerce with product filtering, cart, auth &amp; payment integration.
-          </p>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Full-featured e-commerce with product filtering, cart, auth &amp; payment integration.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Shopify</span>
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">HTML</span>
@@ -725,16 +694,14 @@
         </div>
       </div>
 
-      <div class="glass glass-hover project-card rounded-2xl overflow-hidden reveal">
+      <div class="portfolio-item glass glass-hover project-card rounded-2xl overflow-hidden reveal" data-category="website">
         <div class="project-img-wrap">
           <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&fit=crop" alt="Real Estate" />
         </div>
         <div class="p-5">
           <span class="text-xs font-medium text-blue-400 bg-blue-400/10 rounded-full px-3 py-1">Real Estate</span>
           <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">DCNPL Hills Vistaa</h3>
-          <p class="text-slate-500 text-xs leading-relaxed mb-4">
-            Responsive real estate township platform (web + mobile) with smooth navigation &amp; optimised UX.
-          </p>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Responsive real estate township platform with smooth navigation &amp; optimised UX.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">HTML</span>
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">CSS</span>
@@ -751,16 +718,14 @@
         </div>
       </div>
 
-      <div class="glass glass-hover project-card rounded-2xl overflow-hidden reveal">
+      <div class="portfolio-item glass glass-hover project-card rounded-2xl overflow-hidden reveal" data-category="website">
         <div class="project-img-wrap">
           <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80&fit=crop" alt="Evantage Store" />
         </div>
         <div class="p-5">
           <span class="text-xs font-medium text-yellow-400 bg-yellow-400/10 rounded-full px-3 py-1">Amazon Platform</span>
           <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">Evantage Store</h3>
-          <p class="text-slate-500 text-xs leading-relaxed mb-4">
-            Amazon services including product listing optimisation, keyword research &amp; account management.
-          </p>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Amazon services including product listing optimisation, keyword research &amp; account management.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">HTML</span>
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">CSS</span>
@@ -777,16 +742,14 @@
         </div>
       </div>
 
-      <div class="glass glass-hover project-card rounded-2xl overflow-hidden reveal">
+      <div class="portfolio-item glass glass-hover project-card rounded-2xl overflow-hidden reveal" data-category="website">
         <div class="project-img-wrap">
           <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80&fit=crop" alt="IT Company" />
         </div>
         <div class="p-5">
           <span class="text-xs font-medium text-green-400 bg-green-400/10 rounded-full px-3 py-1">IT Software</span>
-          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">IT Company Website</h3>
-          <p class="text-slate-500 text-xs leading-relaxed mb-4">
-            End-to-end IT solutions — web dev, UI/UX &amp; app development for scalable digital products.
-          </p>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">Hvantage Technologies</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">End-to-end IT solutions — web dev, UI/UX &amp; app development for scalable digital products.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">HTML</span>
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">CSS</span>
@@ -803,16 +766,14 @@
         </div>
       </div>
 
-      <div class="glass glass-hover project-card rounded-2xl overflow-hidden reveal">
+      <div class="portfolio-item glass glass-hover project-card rounded-2xl overflow-hidden reveal" data-category="website">
         <div class="project-img-wrap">
           <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80&fit=crop" alt="Dubai" />
         </div>
         <div class="p-5">
           <span class="text-xs font-medium text-accent bg-accent/10 rounded-full px-3 py-1">Corporate</span>
           <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">Company Incorporation Dubai</h3>
-          <p class="text-slate-500 text-xs leading-relaxed mb-4">
-            End-to-end company incorporation services in Dubai with business setup &amp; documentation.
-          </p>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">End-to-end company incorporation services in Dubai with business setup &amp; documentation.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">React</span>
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">MongoDB</span>
@@ -828,16 +789,14 @@
         </div>
       </div>
 
-      <div class="glass glass-hover project-card rounded-2xl overflow-hidden reveal">
+      <div class="portfolio-item glass glass-hover project-card rounded-2xl overflow-hidden reveal" data-category="website">
         <div class="project-img-wrap">
           <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&fit=crop" alt="Food" />
         </div>
         <div class="p-5">
           <span class="text-xs font-medium text-orange-400 bg-orange-400/10 rounded-full px-3 py-1">E-Commerce</span>
           <h3 class="font-display font-semibold text-white text-lg mt-3 mb-2">Online Food Ordering</h3>
-          <p class="text-slate-500 text-xs leading-relaxed mb-4">
-            Food ordering platform enabling users to browse menus &amp; enjoy smooth checkout experience.
-          </p>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Food ordering platform enabling users to browse menus &amp; enjoy smooth checkout experience.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">PHP</span>
             <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">CSS</span>
@@ -853,13 +812,250 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- ===== LOGOS ===== -->
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="logo">
+        <div class="logo-card-img" style="background: linear-gradient(135deg,#0e1a2b,#0e1420);">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/FPG-HK-COLOR-LOGO-BIG.png" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-purple-400 bg-purple-400/10 rounded-full px-3 py-1">Logo Design</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Nexus Studio</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Geometric circle motif with bold wordmark for a creative agency. Dark variant shown.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Illustrator</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Figma</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="logo">
+        <div class="logo-card-img" style="background: linear-gradient(135deg,#0a1a10,#0d1f0d);">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/Logo2.jpg" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-green-400 bg-green-400/10 rounded-full px-3 py-1">Logo Design</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Verde Organic</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Triangle leaf icon for an organic food brand — clean, sustainable, minimal.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="logo">
+        <div class="logo-card-img" style="background: linear-gradient(135deg,#1a0e10,#200a0a);">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/H-Guard-Logo-Web.png" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-red-400 bg-red-400/10 rounded-full px-3 py-1">Logo Design</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Boldfire Media</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Bold monogram logo for a digital media company. High-impact red on dark.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photophop</span>
+            
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== BROCHURES ===== -->
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="brochure">
+        <div class="project-img-wrap brochure-img">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/Vault1.jpg" alt="Brochure" style="height:240px" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-blue-400 bg-blue-400/10 rounded-full px-3 py-1">Brochure</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Real Estate Tri-Fold</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Luxury property brochure with full-bleed photography, clean grid, and premium finish. A4 tri-fold, print-ready PDF.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Illustrator</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Print</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="brochure">
+        <div class="project-img-wrap brochure-img">
+          <img src="http://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/Final-1.jpg" alt="Education Brochure" style="height:240px" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-yellow-400 bg-yellow-400/10 rounded-full px-3 py-1">Brochure</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Education Institute Leaflet</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">4-page prospectus brochure for a coaching centre. Vibrant layout, infographics, and result highlights.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">InDesign</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="brochure">
+        <div class="project-img-wrap brochure-img">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/BroucherA-Page1.jpg" alt="Healthcare Brochure" style="height:240px" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-teal-400 bg-teal-400/10 rounded-full px-3 py-1">Brochure</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Healthcare Clinic Brochure</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Professional bi-fold for a multi-specialty clinic. Clean white space, icons, and trust-building layout.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Illustrator</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Print</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== BUSINESS CARDS ===== -->
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="bizcard">
+        <div class="project-img-wrap biz-img" style="background:#0d1117; display:flex; align-items:center; justify-content:center; padding:20px 24px;">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/356399774_f2fd00f0-4019-40a2-ae71-28489071ab7f.jpg" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-purple-400 bg-purple-400/10 rounded-full px-3 py-1">Business Card</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Dark Premium Card</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Elegant dark-gradient card for a designer / developer. Matte finish, spot UV logo, standard size.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Illustrator</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="bizcard">
+        <div class="project-img-wrap biz-img" style="background:#f8f6f0; display:flex; align-items:center; justify-content:center; padding:20px 24px;">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/Arun-Bhatewara-Business-Card-Back.jpg" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-green-400 bg-green-400/10 rounded-full px-3 py-1">Business Card</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Clean White Corporate</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Minimalist white card with bold accent border for a real estate director. Professional & trustworthy.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Print</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="bizcard">
+        <div class="project-img-wrap biz-img" style="background:#0a0a0a; display:flex; align-items:center; justify-content:center; padding:20px 24px;">
+          <img src="https://raw.githubusercontent.com/myownh/frontenddeveloper/refs/heads/main/10313841_18203357.jpg" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-red-400 bg-red-400/10 rounded-full px-3 py-1">Business Card</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Bold Dark Gold Edition</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">High-impact dark card with red accents for a CEO. Matte laminate with soft-touch finish.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Illustrator</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+          </div>
+          <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 w-full justify-center">
+            <i class="fa-solid fa-phone text-xs"></i> Discuss Project
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== MOBILE APPS ===== -->
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="app">
+        <div class="project-img-wrap app-img">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80&fit=crop" alt="Food App" style="height:280px;object-position:top" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-orange-400 bg-orange-400/10 rounded-full px-3 py-1">Mobile App</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">MealGaadi — Food App</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">iOS &amp; Android UI for a food delivery app — home feed, restaurant detail, cart, and order tracking screens.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Figma</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">React Native</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">UI/UX</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.meal_gaadi" target="_blank" class="btn-primary text-xs py-2 px-4 flex-1 justify-center">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View
+            </a>
+            <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 flex-1 justify-center">
+              <i class="fa-solid fa-phone text-xs"></i> Call Me
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="app">
+        <div class="project-img-wrap app-img">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&q=80&fit=crop" alt="Finance App" style="height:280px;object-position:top" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-blue-400 bg-blue-400/10 rounded-full px-3 py-1">Mobile App</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Diamond Memo Trading App</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Personal finance tracker app with dark mode, spending graphs, budget alerts, and card management UI.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Android App</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.hvantage.diamondapp" class="btn-primary text-xs py-2 px-4 flex-1 justify-center">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View
+            </a>
+            <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 flex-1 justify-center">
+              <i class="fa-solid fa-phone text-xs"></i> Call Me
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item glass glass-hover rounded-2xl overflow-hidden reveal" data-category="app">
+        <div class="project-img-wrap app-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&fit=crop" alt="Shopping App" style="height:280px;object-position:top" />
+        </div>
+        <div class="p-5">
+          <span class="text-xs font-medium text-pink-400 bg-pink-400/10 rounded-full px-3 py-1">Mobile App</span>
+          <h3 class="font-display font-semibold text-white text-lg mt-3 mb-1">Township Management App</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-4">Smart Township Management App designed to streamline society operations.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Photoshop</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">React Native</span>
+            <span class="text-xs bg-white/5 text-slate-400 rounded px-2 py-1">Strong Backend</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.dcnpl.hvantage" class="btn-primary text-xs py-2 px-4 flex-1 justify-center">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View
+            </a>
+            <a href="tel:+91-9669387011" class="btn-outline text-xs py-2 px-4 flex-1 justify-center">
+              <i class="fa-solid fa-phone text-xs"></i> Call Me
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end portfolio-grid -->
   </div>
 </section>
 
-<!-- ====================================================
-     EXPERIENCE
-===================================================== -->
+<!-- EXPERIENCE -->
 <section id="experience" class="py-28 relative overflow-hidden">
   <div class="blob w-[400px] h-[400px] bg-blue-600/10 top-0 right-0"></div>
   <div class="max-w-5xl mx-auto px-6">
@@ -869,19 +1065,14 @@
         Experience &amp; <span class="grad-text">Education</span>
       </h2>
     </div>
-
     <div class="grid lg:grid-cols-2 gap-12">
-      <!-- Work -->
       <div>
         <h3 class="font-display font-semibold text-white text-xl mb-8 flex items-center gap-3">
           <span class="text-purple-400"><i class="fa-solid fa-briefcase"></i></span> Work Experience
         </h3>
         <div class="flex flex-col gap-6">
           <div class="flex gap-4 reveal">
-            <div class="flex flex-col items-center">
-              <div class="timeline-dot"></div>
-              <div class="flex-1 w-px bg-white/10 mt-2"></div>
-            </div>
+            <div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="flex-1 w-px bg-white/10 mt-2"></div></div>
             <div class="glass glass-hover rounded-xl p-5 flex-1 -mt-1">
               <span class="text-xs text-slate-500">Nov 2014 – Present</span>
               <h4 class="font-semibold text-white mt-1">Frontend Developer</h4>
@@ -892,12 +1083,8 @@
               </ul>
             </div>
           </div>
-
           <div class="flex gap-4 reveal">
-            <div class="flex flex-col items-center">
-              <div class="timeline-dot"></div>
-              <div class="flex-1 w-px bg-white/10 mt-2"></div>
-            </div>
+            <div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="flex-1 w-px bg-white/10 mt-2"></div></div>
             <div class="glass glass-hover rounded-xl p-5 flex-1 -mt-1">
               <span class="text-xs text-slate-500">Oct 2013 – Sep 2014</span>
               <h4 class="font-semibold text-white mt-1">Junior Frontend Developer</h4>
@@ -909,11 +1096,8 @@
               </ul>
             </div>
           </div>
-
           <div class="flex gap-4 reveal">
-            <div class="flex flex-col items-center">
-              <div class="timeline-dot"></div>
-            </div>
+            <div class="flex flex-col items-center"><div class="timeline-dot"></div></div>
             <div class="glass glass-hover rounded-xl p-5 flex-1 -mt-1">
               <span class="text-xs text-slate-500">Aug 2012 – Oct 2013</span>
               <h4 class="font-semibold text-white mt-1">Frontend Intern</h4>
@@ -925,41 +1109,29 @@
           </div>
         </div>
       </div>
-
-      <!-- Education -->
       <div>
         <h3 class="font-display font-semibold text-white text-xl mb-8 flex items-center gap-3">
           <span class="text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span> Education
         </h3>
         <div class="flex flex-col gap-6">
           <div class="flex gap-4 reveal">
-            <div class="flex flex-col items-center">
-              <div class="timeline-dot" style="background: linear-gradient(135deg,#3B82F6,#60A5FA)"></div>
-              <div class="flex-1 w-px bg-white/10 mt-2"></div>
-            </div>
+            <div class="flex flex-col items-center"><div class="timeline-dot" style="background: linear-gradient(135deg,#3B82F6,#60A5FA)"></div><div class="flex-1 w-px bg-white/10 mt-2"></div></div>
             <div class="glass glass-hover rounded-xl p-5 flex-1 -mt-1">
               <span class="text-xs text-slate-500">2009 – 2012</span>
               <h4 class="font-semibold text-white mt-1">Bachelor in Computer Application</h4>
               <p class="text-xs text-blue-400 mt-0.5">SCMIPS, Indore</p>
             </div>
           </div>
-
           <div class="flex gap-4 reveal">
-            <div class="flex flex-col items-center">
-              <div class="timeline-dot" style="background: linear-gradient(135deg,#3B82F6,#60A5FA)"></div>
-              <div class="flex-1 w-px bg-white/10 mt-2"></div>
-            </div>
+            <div class="flex flex-col items-center"><div class="timeline-dot" style="background: linear-gradient(135deg,#3B82F6,#60A5FA)"></div><div class="flex-1 w-px bg-white/10 mt-2"></div></div>
             <div class="glass glass-hover rounded-xl p-5 flex-1 -mt-1">
               <span class="text-xs text-slate-500">2006 – 2009</span>
               <h4 class="font-semibold text-white mt-1">10th to 12th Standard</h4>
               <p class="text-xs text-blue-400 mt-0.5">SSM, Dhar</p>
             </div>
           </div>
-
           <div class="flex gap-4 reveal">
-            <div class="flex flex-col items-center">
-              <div class="timeline-dot" style="background: linear-gradient(135deg,#3B82F6,#60A5FA)"></div>
-            </div>
+            <div class="flex flex-col items-center"><div class="timeline-dot" style="background: linear-gradient(135deg,#3B82F6,#60A5FA)"></div></div>
             <div class="glass glass-hover rounded-xl p-5 flex-1 -mt-1">
               <span class="text-xs text-slate-500">2009</span>
               <h4 class="font-semibold text-white mt-1">ADCA Certificate</h4>
@@ -972,9 +1144,7 @@
   </div>
 </section>
 
-<!-- ====================================================
-     AVAILABILITY
-===================================================== -->
+<!-- AVAILABILITY -->
 <section id="availability" class="py-20 relative overflow-hidden">
   <div class="max-w-5xl mx-auto px-6">
     <div class="reveal" style="background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(59,130,246,0.1)); border: 1px solid rgba(124,58,237,0.3); border-radius: 24px; padding: 48px;">
@@ -995,26 +1165,17 @@
         <div class="grid gap-3">
           <div class="glass rounded-xl p-4 flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 text-lg">💼</div>
-            <div>
-              <p class="font-semibold text-white text-sm">Freelance Projects</p>
-              <p class="text-xs text-slate-500">Full project delivery</p>
-            </div>
+            <div><p class="font-semibold text-white text-sm">Freelance Projects</p><p class="text-xs text-slate-500">Full project delivery</p></div>
             <span class="ml-auto text-green-400 text-xs font-semibold bg-green-400/10 px-2 py-1 rounded-full">Open</span>
           </div>
           <div class="glass rounded-xl p-4 flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 text-lg">🌙</div>
-            <div>
-              <p class="font-semibold text-white text-sm">After Office Hours</p>
-              <p class="text-xs text-slate-500">Evening availability</p>
-            </div>
+            <div><p class="font-semibold text-white text-sm">After Office Hours</p><p class="text-xs text-slate-500">Evening availability</p></div>
             <span class="ml-auto text-green-400 text-xs font-semibold bg-green-400/10 px-2 py-1 rounded-full">Open</span>
           </div>
           <div class="glass rounded-xl p-4 flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center text-accent text-lg">📅</div>
-            <div>
-              <p class="font-semibold text-white text-sm">Weekend / Sunday Work</p>
-              <p class="text-xs text-slate-500">Weekend sprints</p>
-            </div>
+            <div><p class="font-semibold text-white text-sm">Weekend / Sunday Work</p><p class="text-xs text-slate-500">Weekend sprints</p></div>
             <span class="ml-auto text-green-400 text-xs font-semibold bg-green-400/10 px-2 py-1 rounded-full">Open</span>
           </div>
         </div>
@@ -1023,9 +1184,7 @@
   </div>
 </section>
 
-<!-- ====================================================
-     TESTIMONIALS
-===================================================== -->
+<!-- TESTIMONIALS -->
 <section id="testimonials" class="py-28 relative overflow-hidden">
   <div class="blob w-[500px] h-[500px] bg-purple-700/10 bottom-0 right-0"></div>
   <div class="max-w-5xl mx-auto px-6">
@@ -1035,73 +1194,42 @@
         What Clients <span class="grad-text">Say</span>
       </h2>
     </div>
-
     <div class="relative overflow-hidden reveal">
       <div class="testimonial-track" id="testimonial-track">
-
         <div class="testimonial-card px-2">
           <div class="glass rounded-2xl p-8 mx-auto max-w-2xl text-center">
-            <div class="flex justify-center mb-4">
-              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center font-display font-bold text-white text-xl">R</div>
-            </div>
+            <div class="flex justify-center mb-4"><div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center font-display font-bold text-white text-xl">R</div></div>
             <div class="flex justify-center gap-1 mb-4">
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+              <i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i>
             </div>
-            <p class="text-slate-300 text-base leading-relaxed mb-6 italic">
-              "Harshit delivered our e-commerce platform ahead of schedule. The attention to detail and UI precision was outstanding. Our conversion rate improved significantly after launch."
-            </p>
+            <p class="text-slate-300 text-base leading-relaxed mb-6 italic">"Harshit delivered our e-commerce platform ahead of schedule. The attention to detail and UI precision was outstanding. Our conversion rate improved significantly after launch."</p>
             <p class="font-semibold text-white">Ahmed Rehman</p>
             <p class="text-xs text-slate-500 mt-1">Director, SR Takat Jewellers</p>
           </div>
         </div>
-
         <div class="testimonial-card px-2">
           <div class="glass rounded-2xl p-8 mx-auto max-w-2xl text-center">
-            <div class="flex justify-center mb-4">
-              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-accent flex items-center justify-center font-display font-bold text-white text-xl">P</div>
-            </div>
+            <div class="flex justify-center mb-4"><div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-accent flex items-center justify-center font-display font-bold text-white text-xl">P</div></div>
             <div class="flex justify-center gap-1 mb-4">
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+              <i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i>
             </div>
-            <p class="text-slate-300 text-base leading-relaxed mb-6 italic">
-              "Working with Harshit on our real estate platform was a pleasure. He understood our requirements perfectly and delivered a clean, modern UI that our clients love."
-            </p>
+            <p class="text-slate-300 text-base leading-relaxed mb-6 italic">"Working with Harshit on our real estate platform was a pleasure. He understood our requirements perfectly and delivered a clean, modern UI that our clients love."</p>
             <p class="font-semibold text-white">Nilesh Jain</p>
             <p class="text-xs text-slate-500 mt-1">Director, DCNPL Hills Vistaa</p>
           </div>
         </div>
-
         <div class="testimonial-card px-2">
           <div class="glass rounded-2xl p-8 mx-auto max-w-2xl text-center">
-            <div class="flex justify-center mb-4">
-              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center font-display font-bold text-white text-xl">A</div>
-            </div>
+            <div class="flex justify-center mb-4"><div class="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center font-display font-bold text-white text-xl">A</div></div>
             <div class="flex justify-center gap-1 mb-4">
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-              <i class="fa-solid fa-star-half-stroke text-yellow-400 text-sm"></i>
+              <i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star text-yellow-400 text-sm"></i><i class="fa-solid fa-star-half-stroke text-yellow-400 text-sm"></i>
             </div>
-            <p class="text-slate-300 text-base leading-relaxed mb-6 italic">
-              "Exceptional React development skills. The dashboard he built for us is incredibly performant and the UI is among the best I've seen in our industry."
-            </p>
+            <p class="text-slate-300 text-base leading-relaxed mb-6 italic">"Exceptional React development skills. The dashboard he built for us is incredibly performant and the UI is among the best I've seen in our industry."</p>
             <p class="font-semibold text-white">Arun Bhatewara</p>
             <p class="text-xs text-slate-500 mt-1">Founder, The Future Perfect Global</p>
           </div>
         </div>
-
       </div>
-
-      <!-- Controls -->
       <div class="flex justify-center items-center gap-4 mt-8">
         <button id="prev-btn" class="w-10 h-10 rounded-full glass flex items-center justify-center text-purple-400 hover:text-white hover:bg-purple-500/20 transition">
           <i class="fa-solid fa-chevron-left text-sm"></i>
@@ -1115,9 +1243,7 @@
   </div>
 </section>
 
-<!-- ====================================================
-     CONTACT
-===================================================== -->
+<!-- CONTACT -->
 <section id="contact" class="py-28 relative overflow-hidden">
   <div class="blob w-[500px] h-[500px] bg-purple-700/10 top-0 left-0"></div>
   <div class="max-w-5xl mx-auto px-6">
@@ -1130,8 +1256,6 @@
         Have a project in mind? I'm always open to exciting opportunities. I'll get back to you within 24 hours.
       </p>
     </div>
-
-    <!-- CTA Buttons -->
     <div class="flex flex-wrap justify-center gap-5 mb-14 reveal">
       <a href="https://wa.me/919669387011?text=Hi%20Harshit%2C%20I%20have%20a%20project%20for%20you!" target="_blank"
         class="btn-primary text-base px-8 py-4" style="background: linear-gradient(135deg,#22C55E,#16A34A); box-shadow: 0 8px 30px rgba(34,197,94,0.25)">
@@ -1141,53 +1265,31 @@
         <i class="fa-solid fa-phone text-sm"></i> Call Now
       </a>
     </div>
-
     <div class="grid lg:grid-cols-1 max-w-2xl mx-auto gap-10">
-      <!-- Info -->
       <div class="reveal flex flex-col gap-4">
         <a href="mailto:myownh1@gmail.com" class="glass glass-hover rounded-xl p-5 flex items-center gap-4 text-left no-underline">
           <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 text-xl">📧</div>
-          <div>
-            <p class="text-xs text-slate-500 mb-1">Email</p>
-            <p class="font-semibold text-white text-sm">myownh1@gmail.com</p>
-          </div>
+          <div><p class="text-xs text-slate-500 mb-1">Email</p><p class="font-semibold text-white text-sm">myownh1@gmail.com</p></div>
           <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 ml-auto text-xs"></i>
         </a>
-
         <a href="https://www.linkedin.com/in/harshitgoyalfront/" target="_blank" class="glass glass-hover rounded-xl p-5 flex items-center gap-4 no-underline">
           <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 text-xl">💼</div>
-          <div>
-            <p class="text-xs text-slate-500 mb-1">LinkedIn</p>
-            <p class="font-semibold text-white text-sm">harshitgoyalfront</p>
-          </div>
+          <div><p class="text-xs text-slate-500 mb-1">LinkedIn</p><p class="font-semibold text-white text-sm">harshitgoyalfront</p></div>
           <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 ml-auto text-xs"></i>
         </a>
-
         <a href="https://www.instagram.com/harshit.goyal.2131/" target="_blank" class="glass glass-hover rounded-xl p-5 flex items-center gap-4 no-underline">
           <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl">📸</div>
-          <div>
-            <p class="text-xs text-slate-500 mb-1">Instagram</p>
-            <p class="font-semibold text-white text-sm">harshit.goyal.2131</p>
-          </div>
+          <div><p class="text-xs text-slate-500 mb-1">Instagram</p><p class="font-semibold text-white text-sm">harshit.goyal.2131</p></div>
           <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 ml-auto text-xs"></i>
         </a>
-
         <a href="https://x.com/myownh1" target="_blank" class="glass glass-hover rounded-xl p-5 flex items-center gap-4 no-underline">
           <div class="w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-400 text-xl">𝕏</div>
-          <div>
-            <p class="text-xs text-slate-500 mb-1">Twitter / X</p>
-            <p class="font-semibold text-white text-sm">@myownh1</p>
-          </div>
+          <div><p class="text-xs text-slate-500 mb-1">Twitter / X</p><p class="font-semibold text-white text-sm">@myownh1</p></div>
           <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 ml-auto text-xs"></i>
         </a>
-
-        <!-- Location -->
         <div class="glass rounded-xl p-5 flex items-center gap-4">
           <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 text-xl">📍</div>
-          <div>
-            <p class="text-xs text-slate-500 mb-1">Location</p>
-            <p class="font-semibold text-white text-sm">Indore, India</p>
-          </div>
+          <div><p class="text-xs text-slate-500 mb-1">Location</p><p class="font-semibold text-white text-sm">Indore, India</p></div>
         </div>
       </div>
     </div>
@@ -1204,7 +1306,7 @@
       </div>
       <div class="flex gap-6 text-xs text-slate-500">
         <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
         <a href="#contact" class="hover:text-white transition">Contact</a>
       </div>
       <p class="text-xs text-slate-600">© 2025 Harshit Goyal. All rights reserved.</p>
@@ -1218,22 +1320,28 @@
   <span class="text-sm text-white font-medium">Message sent! I'll get back to you shortly.</span>
 </div>
 
+<!-- Floating Buttons -->
+<a href="https://wa.me/919669387011?text=Hi%20Harshit%2C%20I%20have%20a%20project%20for%20you!" target="_blank" class="floating-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<a href="tel:+919669387011" class="floating-btn call-btn" aria-label="Call Now">
+  <i class="fa-solid fa-phone"></i>
+</a>
+
 <script>
-/* ============ LOADER ============ */
+/* LOADER */
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('loader').classList.add('hidden');
-  }, 900);
+  setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 900);
 });
 
-/* ============ NAVBAR SCROLL ============ */
+/* NAVBAR SCROLL */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
   updateActiveNav();
 });
 
-/* ============ HAMBURGER ============ */
+/* HAMBURGER */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 hamburger.addEventListener('click', () => {
@@ -1248,76 +1356,107 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
   });
 });
 
-/* ============ ACTIVE NAV ============ */
+/* ACTIVE NAV */
 function updateActiveNav() {
   const sections = document.querySelectorAll('section[id]');
   let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
   document.querySelectorAll('.nav-link').forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href') === '#' + current) link.classList.add('active');
   });
 }
 
-/* ============ SCROLL REVEAL ============ */
+/* SCROLL REVEAL */
 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
       setTimeout(() => {
         entry.target.classList.add('visible');
-        // Trigger skill bars
-        entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
+        entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => { bar.style.width = bar.dataset.width + '%'; });
       }, 80);
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 revealElements.forEach(el => revealObserver.observe(el));
 
-/* ============ SKILL BARS ============ */
+/* SKILL BARS */
 const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        bar.style.width = bar.dataset.width + '%';
-      });
+      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => { bar.style.width = bar.dataset.width + '%'; });
       skillObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.3 });
 document.querySelectorAll('.skill-card').forEach(card => skillObserver.observe(card));
 
-/* ============ TESTIMONIAL SLIDER ============ */
+/* ============ PORTFOLIO FILTER ============ */
+const filterTabs = document.querySelectorAll('.filter-tab');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+const grid = document.getElementById('portfolio-grid');
+
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Update active tab
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.dataset.filter;
+
+    // Reset grid to static positioning first
+    grid.style.position = 'relative';
+
+    portfolioItems.forEach(item => {
+      const cat = item.dataset.category;
+      if (filter === 'all' || cat === filter) {
+        item.style.display = '';
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px) scale(0.96)';
+        // Animate in
+        setTimeout(() => {
+          item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0) scale(1)';
+        }, 30);
+      } else {
+        item.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.92)';
+        setTimeout(() => { item.style.display = 'none'; }, 260);
+      }
+    });
+  });
+});
+
+/* TESTIMONIAL SLIDER */
 const track = document.getElementById('testimonial-track');
 const cards = document.querySelectorAll('.testimonial-card');
 const dotsContainer = document.getElementById('dots');
-let current = 0;
+let currentSlide = 0;
 
 cards.forEach((_, i) => {
   const dot = document.createElement('button');
-  dot.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-purple-500 w-6' : 'bg-white/20');
+  dot.className = 'rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-purple-500 w-6 h-2' : 'bg-white/20 w-2 h-2');
   dot.addEventListener('click', () => goTo(i));
   dotsContainer.appendChild(dot);
 });
 
 function goTo(idx) {
-  current = (idx + cards.length) % cards.length;
-  track.style.transform = `translateX(-${current * 100}%)`;
+  currentSlide = (idx + cards.length) % cards.length;
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
   dotsContainer.querySelectorAll('button').forEach((d, i) => {
-    d.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === current ? 'bg-purple-500 w-6' : 'bg-white/20');
+    d.className = 'rounded-full transition-all duration-300 ' + (i === currentSlide ? 'bg-purple-500 w-6 h-2' : 'bg-white/20 w-2 h-2');
   });
 }
 
-document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
-document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
-setInterval(() => goTo(current + 1), 5000);
+document.getElementById('prev-btn').addEventListener('click', () => goTo(currentSlide - 1));
+document.getElementById('next-btn').addEventListener('click', () => goTo(currentSlide + 1));
+setInterval(() => goTo(currentSlide + 1), 5000);
 
-/* ============ PARTICLES ============ */
+/* PARTICLES */
 (function() {
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
@@ -1353,7 +1492,6 @@ setInterval(() => goTo(current + 1), 5000);
       ctx.fillStyle = p.color;
       ctx.fill();
     });
-    // Lines
     particles.forEach((a, i) => {
       particles.slice(i + 1).forEach(b => {
         const d = Math.hypot(a.x - b.x, a.y - b.y);
@@ -1370,96 +1508,6 @@ setInterval(() => goTo(current + 1), 5000);
   }
   draw();
 })();
-
-/* ============ FORM SUBMIT ============ */
-function handleFormSubmit() {
-  const toast = document.getElementById('toast');
-  toast.style.opacity = '1';
-  toast.style.pointerEvents = 'auto';
-  toast.style.transform = 'translateY(0)';
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    toast.style.pointerEvents = 'none';
-    toast.style.transform = 'translateY(16px)';
-  }, 3500);
-}
 </script>
-<!-- Floating WhatsApp Button (bottom left) -->
-<a href="https://wa.me/919669387011?text=Hi%20Harshit%2C%20I%20have%20a%20project%20for%20you!" target="_blank"
-  class="floating-btn whatsapp-btn"
-  aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<!-- Floating Call Now Button (bottom right) -->
-<a href="tel:+919669387011"
-  class="floating-btn call-btn"
-  aria-label="Call Now">
-  <i class="fa-solid fa-phone"></i>
-</a>
-
-<style>
-  .floating-btn {
-    position: fixed;
-    bottom: 28px;
-    z-index: 999;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s;
-  }
-  .floating-btn i { font-size: 22px; }
-
-  .whatsapp-btn {
-    left: 24px;
-    background: linear-gradient(135deg, #22C55E, #16A34A);
-    box-shadow: 0 6px 24px rgba(34,197,94,0.45);
-    animation: floatUp 0.6s 1.2s both;
-  }
-  .whatsapp-btn:hover {
-    transform: translateY(-4px) scale(1.12);
-    box-shadow: 0 12px 32px rgba(34,197,94,0.55);
-  }
-
-  .call-btn {
-    right: 24px;
-    background: linear-gradient(135deg, #7C3AED, #3B82F6);
-    box-shadow: 0 6px 24px rgba(124,58,237,0.45);
-    animation: floatUp 0.6s 1.4s both;
-  }
-  .call-btn:hover {
-    transform: translateY(-4px) scale(1.12);
-    box-shadow: 0 12px 32px rgba(124,58,237,0.55);
-  }
-
-  .whatsapp-btn::before,
-  .call-btn::before {
-    content: '';
-    position: absolute;
-    inset: -5px;
-    border-radius: 50%;
-    opacity: 0;
-    animation: pulse-ring 2.5s ease-out infinite;
-  }
-  .whatsapp-btn::before { border: 2px solid rgba(34,197,94,0.6); }
-  .call-btn::before    { border: 2px solid rgba(124,58,237,0.6); }
-
-  @keyframes pulse-ring {
-    0%   { transform: scale(0.9); opacity: 0.8; }
-    70%  { transform: scale(1.4); opacity: 0; }
-    100% { opacity: 0; }
-  }
-  @keyframes floatUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-</style>
 </body>
 </html>
